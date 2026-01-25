@@ -88,6 +88,32 @@
             opacity: 1;
             transform: translateY(0);
         }
+        @keyframes roll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-roll {
+  width: max-content;
+  animation: roll 35s linear infinite;
+}
+
+.roll-img {
+  width: 260px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.roll-img:hover {
+  transform: scale(1.05);
+}
+
+.animate-roll:hover {
+  animation-play-state: paused;
+}
     </style>
 </head>
 <body class="antialiased bg-gradient-to-br from-slate-50 via-white to-orange-50 overflow-x-hidden">
@@ -103,9 +129,9 @@
 
       <!-- Left -->
       <div class="flex items-center gap-4">
-        <img src="./assests/NCC of KI Logo.png" alt="NCC" class="h-10">
+        <img src="./assests/NCC of KI Logo.png" alt="NCC" class="h-16">
         <div class="h-8 w-px bg-slate-300"></div>
-        <img src="./assests/KI Logo.png" alt="KI" class="h-10">
+        <img src="./assests/KI Logo.png" alt="KI" class="h-9">
       </div>
 
       <!-- Center -->
@@ -120,8 +146,8 @@
       <div class="flex items-center gap-4">
         <img src="./assests/NCC Common Logo.png" alt="NCC" class="h-12">
         <a href="./DFC.html"
-           class="bg-orange-600 text-white px-6 py-2 rounded-full text-xs font-bold hover:bg-orange-700 transition">
-          DCE 2026
+           class="bg-red-500 text-white px-6 py-2 rounded-full text-xs font-bold hover:bg-orange-700 transition">
+        Register DCE 2026
         </a>
       </div>
     </div>
@@ -159,8 +185,8 @@
         <a href="#reach" class="hover:text-orange-600">Reach Us</a>
 
         <a href="./DFC.html"
-           class="bg-orange-600 text-white text-center py-2 rounded-full font-bold">
-          DCE 2026
+           class="bg-red-600 text-white text-center py-2 rounded-full font-bold">
+          Register DCE 2026
         </a>
       </nav>
     </div>
@@ -173,66 +199,58 @@
 
 
     <!-- Hero Section -->
-        <section id="home" class="relative min-h-screen flex items-center bg-white overflow-hidden pt-32 pb-16">
-        <div class="absolute top-0 right-0 hidden lg:block w-1/3 h-full bg-slate-50 z-0"></div>
-        <div class="absolute top-20 left-10 w-64 h-64 bg-orange-100 rounded-full blur-3xl opacity-40 z-0"></div>
-        
-        <div class="w-full max-w-md mx-auto px-4 relative z-10 lg:max-w-7xl lg:px-12">
+<section
+  id="home"
+  class="relative min-h-screen flex items-center overflow-hidden pt-32 pb-16 bg-cover bg-center"
+  style="background-image: url('./assests/MVB Tricolour 1.jpg');"
+>
 
-            <div class="grid lg:grid-cols-12 gap-16 items-center">
-            
-            <div class="lg:col-span-7 order-2 lg:order-1">
-                <div class="inline-flex items-center gap-3 mb-8 px-4 py-2 bg-slate-100/80 backdrop-blur-md rounded-lg border border-slate-200">
-                <div class="flex gap-1">
-                    <span class="w-2 h-2 rounded-full bg-orange-600"></span>
-                    <span class="w-2 h-2 rounded-full bg-white"></span>
-                    <span class="w-2 h-2 rounded-full bg-green-600"></span>
-                </div>
-                <span class="text-xs font-bold uppercase tracking-widest text-slate-600">Unity and Discipline</span>
-                </div>
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-white/70"></div>
 
-                <h1 class="text-5xl md:text-7xl lg:text-8xl font-black text-slate-900 leading-tight mb-8">
-                United by <span class="relative">
-                    <span class="relative z-10 text-orange-600">Uniform</span>
-                    <svg class="absolute -bottom-2 left-0 w-full h-3 text-orange-200 z-0" viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M0 5 Q 25 0 50 5 T 100 5" stroke="currentColor" stroke-width="8" fill="none"/></svg>
-                </span>,<br>
-                Driven by Motto.
-                </h1>
+  <!-- Decoration -->
+  <div class="absolute top-20 left-10 w-64 h-64 bg-orange-100 rounded-full blur-3xl opacity-40"></div>
 
-                <p class="text-lg md:text-xl text-slate-600 mb-10 max-w-xl leading-relaxed">
-                National Cadet Corps at <span class="font-bold text-slate-900 underline decoration-orange-500 decoration-4 underline-offset-4">Kumaraguru Institutions</span>. Building character, comradeship, and the spirit of selfless service.
-                </p>
+  <!-- CENTERED CONTENT -->
+  <div class="w-full h-full flex items-center justify-center text-center px-4 relative z-10">
+    <div class="max-w-4xl">
 
-                <div class="flex flex-col sm:flex-row gap-4">
-                <a href="#about" class="inline-flex justify-center items-center px-8 py-4 bg-slate-900 text-white rounded-full font-bold hover:bg-orange-600 transition-all shadow-lg hover:shadow-orange-200">
-                    Discover Our Units
-                </a>
-                <a href="#explore" class="inline-flex justify-center items-center px-8 py-4 border-2 border-slate-900 text-slate-900 rounded-full font-bold hover:bg-slate-900 hover:text-white transition-all">
-                    Explore Impact
-                </a>
-                </div>
-            </div>
-
-            <div class="lg:col-span-5 order-1 lg:order-2 flex justify-center lg:justify-end">
-                 <div class="relative w-full max-w-md lg:max-w-none">
-
-                <div class="relative z-20 rounded-2xl overflow-hidden shadow-2xl transform lg:scale-110 lg:translate-x-4">
-                    <img src="./assests/MVB Tricolour 1.jpg" alt="NCC Flag" class="w-full h-[400px] lg:h-[550px] object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
-                </div>
-                
-                
-                </div>
-            </div>
-
-            </div>
+      <div class="inline-flex items-center justify-center gap-3 mb-8 px-4 py-2 bg-slate-100/80 backdrop-blur-md rounded-lg border border-slate-200">
+        <div class="flex gap-1">
+          <span class="w-2 h-2 rounded-full bg-orange-600"></span>
+          <span class="w-2 h-2 rounded-full bg-white"></span>
+          <span class="w-2 h-2 rounded-full bg-green-600"></span>
         </div>
-        </section>
-        <!-- Scroll Indicator -->
-        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <i data-lucide="chevron-down" class="w-8 h-8 text-slate-400"></i>
-        </div>
-    </section>
+        <span class="text-xs font-bold uppercase tracking-widest text-slate-600">
+          Unity and Discipline
+        </span>
+      </div>
+
+      <h1 class="text-5xl md:text-7xl lg:text-8xl font-black text-slate-900 leading-tight mb-8">
+        United by Uniform,<br />
+        Driven by Motto.
+      </h1>
+
+      <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
+        National Cadet Corps at
+        <span class="font-bold text-slate-900 underline decoration-blue-700 decoration-4 underline-offset-4">
+          Kumaraguru Institutions
+        </span>.
+        <br>
+        Building character, comradeship, and the spirit of selfless service.
+      </p>
+
+    </div>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
+    <i data-lucide="chevron-down" class="w-8 h-8 text-slate-500"></i>
+  </div>
+
+</section>
+
+
 
     <!-- About NCC Section -->
     <section id="about" class="py-24 lg:py-32 bg-white">
@@ -287,12 +305,13 @@
             </div>
             
             <div class="order-2 lg:order-2 space-y-6 text-center lg:text-left">
+                
                 <div class="space-y-2">
-                    <span class="inline-block px-4 py-2 bg-green-100 text-green-700 rounded-full text-xs font-bold uppercase tracking-wider">
+                    <span class="inline-block px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-xs font-bold uppercase tracking-wider">
                         Our Contribution
                     </span>
                     <h2 class="text-4xl lg:text-5xl font-black leading-tight text-slate-900">
-                        NCC in <span class="text-green-700">KI</span>
+                        NCC in <span class="text-blue-700">KI</span>
                     </h2>
                 </div>
                 
@@ -301,7 +320,7 @@
                 </p>
 
                 <div class="pt-4 flex justify-center lg:justify-start">
-                    <div class="h-1 w-20 bg-green-600 rounded-full"></div>
+                    <div class="h-1 w-20 bg-blue-600 rounded-full"></div>
                 </div>
             </div>
         </div>
@@ -310,17 +329,17 @@
 <div class="mb-32 section-reveal px-4">
     <div class="text-center mb-16">
         <span class="inline-block px-4 py-2 bg-slate-100 text-slate-600 rounded-full text-xs font-bold uppercase tracking-widest mb-4">Our Units & Forums</span>
-        <h3 class="text-3xl lg:text-5xl font-black text-slate-900">Wings & <span class="text-orange-600">Battalions</span></h3>
+        <h3 class="text-3xl lg:text-5xl font-black text-slate-900">Wings & Battalions</h3>
     </div>
     
     <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6 items-start">
         
         <div class="group bg-white rounded-3xl p-6 shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center h-full">
-            <div class="relative w-20 h-20 mb-6 flex-shrink-0">
+            <div class="relative w-40 h-20 mb-6 flex-shrink-0">
                     <img src="./assests/2.3 Pictures/1.jpg" alt="4 TN BN" class="w-full h-full object-contain">               
             </div>
             <span class="text-[10px] font-bold uppercase tracking-tighter text-orange-600 bg-orange-50 px-2 py-1 rounded-md">Army Wing</span>
-            <h4 class="text-md font-extrabold text-slate-900 mt-3 mb-2 leading-tight">4 Tamil Nadu Battalion</h4>
+            <h4 class="text-md font-extrabold text-slate-900 mt-3 mb-2 leading-tight">4 Tamil Nadu Battalion NCC</h4>
             <p class="text-xs text-slate-500 leading-relaxed mb-4">The 4 TN BN NCC headquartered in Coimbatore is a pivotal infantry unit.</p>
             
             <details class="group/details mt-auto">
@@ -332,11 +351,11 @@
         </div>
 
         <div class="group bg-white rounded-3xl p-6 shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center h-full">
-            <div class="relative w-20 h-20 mb-6 flex-shrink-0">
+            <div class="relative w-40 h-20 mb-6 flex-shrink-0">
                     <img src="./assests/2.3 Pictures/2.jpg" alt="5 TN Girls" class="w-full h-full object-contain">
             </div>
             <span class="text-[10px] font-bold uppercase tracking-tighter text-pink-600 bg-pink-50 px-2 py-1 rounded-md">Army Wing</span>
-            <h4 class="text-md font-extrabold text-slate-900 mt-3 mb-2 leading-tight">5 TN Girls Battalion</h4>
+            <h4 class="text-md font-extrabold text-slate-900 mt-3 mb-2 leading-tight">5 TN Girls Battalion NCC</h4>
             <p class="text-xs text-slate-500 leading-relaxed mb-4">Designated unit for training and development of Senior Wing female cadets.</p>
             
             <details class="group/details mt-auto">
@@ -348,11 +367,11 @@
         </div>
 
         <div class="group bg-white rounded-3xl p-6 shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center h-full">
-            <div class="relative w-20 h-20 mb-6 flex-shrink-0">
+            <div class="relative w-40 h-20 mb-6 flex-shrink-0">
                     <img src="./assests/2.3 Pictures/3.jpg" alt="5 TN Air" class="w-full h-full object-contain">
             </div>
             <span class="text-[10px] font-bold uppercase tracking-tighter text-blue-600 bg-blue-50 px-2 py-1 rounded-md">Air Wing</span>
-            <h4 class="text-md font-extrabold text-slate-900 mt-3 mb-2 leading-tight">5 TN Air Squadron</h4>
+            <h4 class="text-md font-extrabold text-slate-900 mt-3 mb-2 leading-tight">5 TN Air Squadron <br> (TECH NCC)</h4>
             <p class="text-xs text-slate-500 leading-relaxed mb-4">Unique opportunity for students to engage with the world of aviation.</p>
             
             <details class="group/details mt-auto">
@@ -364,11 +383,11 @@
         </div>
 
         <div class="group bg-white rounded-3xl p-6 shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center h-full">
-            <div class="relative w-20 h-20 mb-6 flex-shrink-0">
-                <img src="./assests/2.3 Pictures/4.png" alt="">
+            <div class="relative w-40 h-20 mb-6 flex-shrink-0">
+                <img src="./assests/2.3 Pictures/4.png" alt="" class="w-full h-full object-contain">
             </div>
             <span class="text-[10px] font-bold uppercase tracking-tighter text-green-600 bg-green-50 px-2 py-1 rounded-md">Army Wing</span>
-            <h4 class="text-md font-extrabold text-slate-900 mt-3 mb-2 leading-tight">15 Tamil Nadu Battalion</h4>
+            <h4 class="text-md font-extrabold text-slate-900 mt-3 mb-2 leading-tight">15 Tamil Nadu Battalion NCC</h4>
             <p class="text-xs text-slate-500 leading-relaxed mb-4">Training and developing cadets at Kumaraguru Institute of Agriculture.</p>
             
             <details class="group/details mt-auto">
@@ -401,7 +420,7 @@
             <div class="section-reveal">
                 <div class="text-center mb-16">
                     <span class="inline-block px-4 py-2 bg-slate-100 text-slate-600 rounded-full text-xs font-bold uppercase tracking-wider mb-4">Our Leaders</span>
-                    <h3 class="text-3xl lg:text-4xl font-black">Associate NCC <span class="gradient-text">Officers</span></h3>
+                    <h3 class="text-3xl lg:text-4xl font-black">Associate  <span class="gradient-text">NCC Officers</span></h3>
                 </div>
                 
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -448,7 +467,7 @@
                             </div>
                         </div>
                         <h5 class="text-lg font-extrabold mb-1">Fg Offr. Dr Sengodan R</h5>
-                        <p class="text-sm text-slate-500 font-semibold mb-3">ANO – 5 TN Air Sqn (Tech) NCC</p>
+                        <p class="text-sm text-slate-500 font-semibold mb-3">ANO – 5 TN Air Sqn (Tech) NCC </p>
                         <div class="flex justify-center gap-3">
                             <a href="#" class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center text-slate-600 hover:bg-blue-600 hover:text-white transition">
                                 <i data-lucide="linkedin" class="w-4 h-4"></i>
@@ -465,7 +484,7 @@
                             </div>
                         </div>
                         <h5 class="text-lg font-extrabold mb-1">Lt. Gopinath A </h5>
-                        <p class="text-sm text-slate-500 font-semibold mb-3">ANO – 15 TN BN NCC - KIA</p>
+                        <p class="text-sm text-slate-500 font-semibold mb-3">ANO – 15 TN BN NCC <br> Kumaraguru Institute of Agriculture</p>
                         <div class="flex justify-center gap-3">
                             <a href="#" class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center text-slate-600 hover:bg-blue-600 hover:text-white transition">
                                 <i data-lucide="linkedin" class="w-4 h-4"></i>
@@ -477,7 +496,49 @@
         </div>
     </section>
 
-    <!-- Explore Us Section -->
+<div class="relative max-w-5xl mx-auto text-center p-10 md:p-16 bg-slate-900 text-white overflow-hidden rounded-3xl shadow-2xl border border-white/10">
+
+  <!-- Top Accent -->
+  <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-600 via-blue-600 to-cyan-400"></div>
+
+  <!-- Glow -->
+  <div class="absolute -top-20 -right-20 w-72 h-72 bg-red-600/20 rounded-full blur-3xl"></div>
+  <div class="absolute -bottom-20 -left-20 w-72 h-72 bg-blue-600/20 rounded-full blur-3xl"></div>
+
+  <!-- Content -->
+  <div class="relative z-10">
+    <span class="inline-block mb-6 px-5 py-2 text-[10px] font-bold uppercase tracking-[0.4em] bg-white/10 border border-white/20 rounded-full">
+      Exclusive Event
+    </span>
+
+    <h2 class="text-4xl md:text-5xl font-black uppercase mb-6 tracking-tight">
+      YUGAM 2026 – <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-blue-500">Defence Career Expo</span>
+    </h2>
+
+    <p class="text-slate-300 text-base md:text-lg leading-relaxed max-w-3xl mx-auto mb-10">
+      Kumaraguru Institutions has been organizing the Defence Career Expo since 2020 as part of
+      <span class="font-bold text-white">YUGAM</span>, South India’s largest techno-cultural and
+      sports festival. This exclusive two-day event inspires young minds through direct
+      interaction with Defence officers, live demonstrations, and technology showcases,
+      highlighting diverse career opportunities in the Armed Forces.
+    </p>
+
+    <!-- CTA Button -->
+    <a href="./DFC.html"
+       class="inline-flex items-center gap-3 px-12 py-4 
+bg-red-600 text-white font-black uppercase tracking-widest
+rounded-full
+hover:bg-blue-700 transition-all
+shadow-xl shadow-red-500/30 hover:shadow-blue-500/40
+hover:scale-[1.02]
+">
+      Register for Expo
+      <span>→</span>
+    </a>
+  </div>
+</div>
+
+
 
 
             <!-- Social Media Feeds -->
@@ -485,10 +546,10 @@
     <div class="container mx-auto px-4 lg:px-8">
         <div class="text-center mb-16">
             <span class="inline-block px-4 py-1.5 bg-slate-900 text-white rounded-md text-[10px] font-bold uppercase tracking-[0.2em] mb-4">
-                Digital Presence
+                Explore Us
             </span>
             <h2 class="text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
-                Connect with our <span class="text-orange-600">Digital Hub</span>
+                Connect with our Digital Hub
             </h2>
             <div class="w-12 h-1 bg-slate-200 mx-auto mt-4"></div>
         </div>
@@ -597,7 +658,7 @@
                     <div class="w-full md:w-1/2 text-center md:text-left">
                         <h4 class="text-2xl font-black text-white mb-4">Why Join NCC?</h4>
                         <p class="text-slate-400 text-sm leading-relaxed mb-6">Discovery your potential. Learn why NCC is the ultimate foundation for leadership and character building.</p>
-                        <span class="inline-block px-4 py-2 border border-green-500 text-green-500 rounded-full text-[10px] font-bold uppercase tracking-widest">Recruitment 2026</span>
+                        <span class="inline-block px-4 py-2 border border-green-500 text-green-500 rounded-full text-[10px] font-bold uppercase tracking-widest">Featured Reel</span>
                     </div>
                 </div>
             </div>
@@ -605,7 +666,8 @@
     </div>
 </section>
 
-            <!-- Testimonial Section -->
+
+
             
         </div>
     </section>
@@ -618,7 +680,7 @@
                 <div class="space-y-10 section-reveal">
                     <div>
                         <span class="inline-block px-4 py-2 bg-orange-100 text-orange-600 rounded-full text-xs font-bold uppercase tracking-wider mb-6">Get In Touch</span>
-                        <h2 class="text-4xl lg:text-5xl font-black mb-12">Reach <span class="gradient-text">Us</span></h2>
+                        <h2 class="text-4xl lg:text-5xl font-black mb-12">Reach Us</span></h2>
                     </div>
                     
                     <!-- Email -->
@@ -634,26 +696,11 @@
                         </div>
                     </div>
 
-                    <!-- Phone -->
-                    <div class="flex items-start gap-6 group">
-                        <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform">
-                            <i data-lucide="phone" class="w-7 h-7"></i>
-                        </div>
-                        <div>
-                            <p class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Call Us</p>
-                            <p class="text-lg font-bold text-slate-900 leading-relaxed">
-                                +91 95007 89497<br>
-                                +91 83444 89706<br>
-                                +91 98940 45082
-                            </p>
-                        </div>
-                    </div>
+
 
                     <!-- Social Media -->
                     <div class="flex items-start gap-6 group">
-                        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform">
-                            <i data-lucide="share-2" class="w-7 h-7"></i>
-                        </div>
+                        
                         <div>
                             <p class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Follow Us</p>
                             <div class="flex gap-3">
@@ -689,60 +736,56 @@
         </div>
     </section>
 
-<footer class="bg-slate-950 text-white pt-20 pb-0 overflow-hidden">
-    <div class="container mx-auto px-4 lg:px-8">
-        <div class="flex flex-col md:flex-row justify-between items-start mb-16 gap-12">
-            
-            <div class="space-y-6">
-                <div class="flex items-center gap-4">
-                    <a href="https://nccindia.gov.in/">
-                        <img src="./assests/NCC Common Logo.png" alt="NCC Logo" class="h-16 shadow-2xl">
-                    </a>
-                    <div class="h-12 w-px bg-slate-700 hidden sm:block"></div>
-                    <div>
-                        <a href="#home">
-                                <img src="./assests/NCC of KI BG LOGO.jpg" alt="" class="h-16 rounded-5xl">
-                        </a>
-                    </div>
-                </div>
-                <p class="text-slate-400 max-w-sm text-sm leading-relaxed">
-                    The National Cadet Corps at Kumaraguru Institutions — fostering leadership, character, and selfless service.
+<footer class="bg-slate-950 text-white pt-20 pb-8 overflow-hidden">
+  <div class="container mx-auto px-4 lg:px-8">
+
+    <div class="grid md:grid-cols-2 gap-12 items-start mb-12">
+
+      <!-- LEFT: LOGOS + ABOUT -->
+      <div class="space-y-6">
+        <div class="flex items-center gap-4">
+          <img src="./assests/NCC of KI Logo.png" alt="NCC Logo" class="h-16 brightness-0 invert opacity-80">
+          <div class="h-12 w-px bg-slate-700"></div>
+          <img src="./assests/KI Logo.png" alt="KI Logo" class="h-10 brightness-0 invert opacity-80">
+        </div>
+
+        <p class="text-slate-400 max-w-sm text-sm leading-relaxed">
+                    The National Cadet Corps at Kumaraguru Institutions 
                 </p>
-                
-                <div class="flex gap-4 pt-2">
-                    <a href="https://www.instagram.com/ncc_of_kumaraguru" target="_blank" class="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center hover:bg-orange-600 hover:border-orange-600 transition-all group">
-                        <i data-lucide="instagram" class="w-5 h-5 text-slate-400 group-hover:text-white"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/company/nccofkumaraguru/" target="_blank" class="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center hover:bg-blue-600 hover:border-blue-600 transition-all group">
-                        <i data-lucide="linkedin" class="w-5 h-5 text-slate-400 group-hover:text-white"></i>
-                    </a>
-                </div>
-            </div>
+      </div>
 
-            <div class="flex flex-col items-end gap-6">
-                <div class="bg-white/5 p-6 rounded-3xl border border-white/10 backdrop-blur-sm">
-                    <img src="./assests/KI Logo.png" alt="Kumaraguru Institutions" class="h-12 brightness-0 invert opacity-80">
-                </div>
-                <div class="flex gap-6 text-[10px] font-bold uppercase tracking-widest text-slate-500">
-                    <a href="https://nccindia.gov.in" target="_blank" class="hover:text-white transition-colors">NCC HQ</a>
-                    <a href="https://kumaraguru.in" target="_blank" class="hover:text-white transition-colors">Kumaraguru.in</a>
-                </div>
-            </div>
-        </div>
+      <!-- RIGHT: CONTACT -->
+      <div class="space-y-6">
+        <h4 class="text-lg font-black text-white uppercase tracking-wider">Contact Us</h4>
 
-        <div class="py-8 border-t border-white/5 text-center">
-            <p class="text-xs text-slate-500 font-medium">
-                &copy; 2026 <span class="text-slate-300">NCC of KI</span>. All rights reserved.
-            </p>
+        <!-- Email only -->
+        <div class="flex items-center gap-4">
+          <div class="w-10 h-10 bg-orange-600/20 rounded-xl flex items-center justify-center text-orange-500">
+            <i data-lucide="mail" class="w-5 h-5"></i>
+          </div>
+          <a href="mailto:ncc@kct.ac.in" class="text-slate-300 hover:text-orange-500 transition">
+            ncc@kct.ac.in
+          </a>
         </div>
+      </div>
+
     </div>
 
-    <div class="flex h-3 w-full">
-        <div class="h-full flex-1 bg-[#D91E27]" title="Army Wing"></div>
-        <div class="h-full flex-1 bg-[#002D62]" title="Navy Wing"></div>
-        <div class="h-full flex-1 bg-[#5EB6E4]" title="Air Wing"></div>
+    <!-- COPYRIGHT -->
+    <div class="border-t border-white/10 pt-6 text-center">
+      <p class="text-xs text-slate-500">
+        © 2026 <span class="text-slate-300 font-semibold">NCC of Kumaraguru Institutions</span>. All rights reserved.
+      </p>
     </div>
+
+  </div>
+
+  <!-- Tricolour Bar -->
+  <div class="flex h-3 w-full"> <div class="h-full flex-1 bg-[#D91E27]" title="Army Wing"></div> 
+  <div class="h-full flex-1 bg-[#002D62]" title="Navy Wing"></div>
+   <div class="h-full flex-1 bg-[#5EB6E4]" title="Air Wing"></div> </div>
 </footer>
+
 
     <!-- Scripts -->
     <script>
