@@ -114,7 +114,46 @@
 .animate-roll:hover {
   animation-play-state: paused;
 }
-    </style>
+
+/* Make sure each details element works independently */
+/* Make sure each details element works independently */
+details {
+    margin-top: auto;
+}
+
+details[open] summary {
+    margin-bottom: 0;
+}
+
+/* Standard text color for all detail paragraphs */
+details p {
+    color: #475569; /* slate-600 */
+}
+
+/* Ensure summary stays styled when open */
+details[open] summary {
+    color: inherit;
+}
+
+/* Smooth transition */
+details summary {
+    transition: all 0.2s ease;
+}
+
+details[open] p {
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} </style>
 </head>
 <body class="antialiased bg-gradient-to-br from-slate-50 via-white to-orange-50 overflow-x-hidden">
 
@@ -354,41 +393,41 @@
         <h3 class="text-3xl lg:text-5xl font-black text-slate-900">Wings & Battalions</h3>
     </div>
     
-    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6 items-start">
+    <div  id="wings-accordion" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6 items-start">
         
-        <div class="group bg-white rounded-3xl p-6 shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center h-full">
+        <div class="group bg-white rounded-3xl p-6 shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center">
             <div class="relative w-40 h-20 mb-6 flex-shrink-0">
                     <img src="./assests/2.3 Pictures/1.jpg" alt="4 TN BN" class="w-full h-full object-contain">               
             </div>
             <span class="text-[10px] font-bold uppercase tracking-tighter text-orange-600 bg-orange-50 px-2 py-1 rounded-md">Army Wing</span>
-            <h4 class="text-md font-extrabold text-slate-900 mt-3 mb-2 leading-tight">4 Tamil Nadu Battalion NCC</h4>
+            <h4 class="text-md font-extrabold text-slate-900 mt-3 mb-2 leading-tight">4 Tamil Nadu Battalion NCC <br><br></h4>
             <p class="text-xs text-slate-500 leading-relaxed mb-4">The 4 TN BN NCC headquartered in Coimbatore is a pivotal infantry unit.</p>
             
             <details class="group/details mt-auto">
-                <summary class="list-none cursor-pointer text-[10px] font-bold text-orange-600 uppercase tracking-widest hover:underline">Read Full Description</summary>
+                <summary class="list-none cursor-pointer text-[10px] font-bold text-orange-600 uppercase tracking-widest hover:underline"><br>Read Full Description</summary>
                 <p class="text-[11px] text-slate-600 leading-relaxed mt-4 pt-4 border-t border-slate-100">
                     Headquartered in Coimbatore, it is one of the pivotal infantry NCC Army Units responsible for moulding the Senior Division & Senior Wing Cadets in the region, including the contingent at Kumaraguru Institutions.
                 </p>
             </details>
         </div>
 
-        <div class="group bg-white rounded-3xl p-6 shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center h-full">
+        <div class="group bg-white rounded-3xl p-6 shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center">
             <div class="relative w-40 h-20 mb-6 flex-shrink-0">
                     <img src="./assests/2.3 Pictures/2.jpg" alt="5 TN Girls" class="w-full h-full object-contain">
             </div>
             <span class="text-[10px] font-bold uppercase tracking-tighter text-pink-600 bg-pink-50 px-2 py-1 rounded-md">Army Wing</span>
-            <h4 class="text-md font-extrabold text-slate-900 mt-3 mb-2 leading-tight">5 TN Girls Battalion NCC</h4>
+            <h4 class="text-md font-extrabold text-slate-900 mt-3 mb-2 leading-tight">5 TN Girls Battalion NCC <br><br></h4>
             <p class="text-xs text-slate-500 leading-relaxed mb-4">Designated unit for training and development of Senior Wing female cadets.</p>
             
             <details class="group/details mt-auto">
                 <summary class="list-none cursor-pointer text-[10px] font-bold text-pink-600 uppercase tracking-widest hover:underline">Read Full Description</summary>
-                <p class="text-[11px] text-slate-600 leading-relaxed mt-4 pt-4 border-t border-slate-100">
+                <p class="text-[10px] text-slate-600 leading-relaxed mt-4 pt-4 border-t border-slate-100">
                     This battalion plays a crucial role in empowering young women by instilling discipline, confidence, and leadership skills, while providing exposure to military training and national service at Kumaraguru Institutions.
                 </p>
             </details>
         </div>
 
-        <div class="group bg-white rounded-3xl p-6 shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center h-full">
+        <div class="group bg-white rounded-3xl p-6 shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center">
             <div class="relative w-40 h-20 mb-6 flex-shrink-0">
                     <img src="./assests/2.3 Pictures/3.jpg" alt="5 TN Air" class="w-full h-full object-contain">
             </div>
@@ -397,42 +436,42 @@
             <p class="text-xs text-slate-500 leading-relaxed mb-4">Unique opportunity for students to engage with the world of aviation.</p>
             
             <details class="group/details mt-auto">
-                <summary class="list-none cursor-pointer text-[10px] font-bold text-blue-600 uppercase tracking-widest hover:underline">Read Full Description</summary>
+                <summary class="list-none cursor-pointer text-[10px] font-bold text-blue-600 uppercase tracking-widest hover:underline"><br>Read Full Description</summary>
                 <p class="text-[11px] text-slate-600 leading-relaxed mt-4 pt-4 border-t border-slate-100">
                     Serves as the training unit for Senior Division & Air Wing cadets. This affiliation provides a unique opportunity for technical students to engage directly with the Indian Air Force framework.
                 </p>
             </details>
         </div>
 
-        <div class="group bg-white rounded-3xl p-6 shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center h-full">
+        <div class="group bg-white rounded-3xl p-6 shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center">
             <div class="relative w-40 h-20 mb-6 flex-shrink-0">
                 <img src="./assests/2.3 Pictures/4.png" alt="" class="w-full h-full object-contain">
             </div>
             <span class="text-[10px] font-bold uppercase tracking-tighter text-green-600 bg-green-50 px-2 py-1 rounded-md">Army Wing</span>
-            <h4 class="text-md font-extrabold text-slate-900 mt-3 mb-2 leading-tight">15 Tamil Nadu Battalion NCC</h4>
+            <h4 class="text-md font-extrabold text-slate-900 mt-3 mb-2 leading-tight">15 Tamil Nadu Battalion NCC <br><br></h4>
             <p class="text-xs text-slate-500 leading-relaxed mb-4">Training and developing cadets at Kumaraguru Institute of Agriculture.</p>
             
             <details class="group/details mt-auto">
-                <summary class="list-none cursor-pointer text-[10px] font-bold text-green-600 uppercase tracking-widest hover:underline">Read Full Description</summary>
+                <summary class="list-none cursor-pointer text-[10px] font-bold text-green-600 uppercase tracking-widest hover:underline"><br>Read Full Description</summary>
                 <p class="text-[11px] text-slate-600 leading-relaxed mt-4 pt-4 border-t border-slate-100">
                     Empowers young students by instilling discipline and leadership skills, alongside exposure to military training and national service specifically for the agricultural campus.
                 </p>
             </details>
         </div>
 
-        <div class="group bg-white rounded-3xl p-6 shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center h-full">
+        <div class="group bg-white rounded-3xl p-6 shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center">
             <div class="relative w-20 h-20 mb-6 flex-shrink-0">
                 <img src="./assests/2.3 Pictures/5.jpeg" alt="">
             </div>
             <span class="text-[10px] font-bold uppercase tracking-tighter text-orange-400 bg-orange-400/10 px-2 py-1 rounded-md">Technical Wing</span>
-            <h4 class="text-md font-extrabold text-black mt-3 mb-2 leading-tight">Defence Tech Forum</h4>
+            <h4 class="text-md font-extrabold text-black mt-3 mb-2 leading-tight">Defence Tech Forum <br><br></h4>
             <p class="text-xs text-slate-400 leading-relaxed mb-4">Pioneering in-house Defence Innovation and Incubation Hub.</p>
             
             <details class="group/details mt-auto">
-                <summary class="list-none cursor-pointer text-[10px] font-bold text-orange-400 uppercase tracking-widest hover:underline">Read Full Description</summary>
-                <p class="text-[11px] text-slate-400 leading-relaxed mt-4 pt-4 border-t border-slate-700">
+                <summary class="list-none cursor-pointer text-[10px] font-bold text-green-600 uppercase tracking-widest hover:underline"><br>Read Full Description</summary>
+                <p class="text-[11px] text-slate-600 leading-relaxed mt-4 pt-4 border-t border-slate-100">
                     Embodies the spirit of Atmanirbhar Bharat, fostering cutting-edge indigenous research and developing breakthrough technological solutions to address critical national security challenges.
-                </p>
+                    </p>
             </details>
         </div>
 
@@ -455,7 +494,7 @@
                             </div>
                         </div>
                         <h5 class="text-lg font-extrabold mb-1">Lt. Sundarrajan N</h5>
-                        <p class="text-sm text-slate-500 font-semibold mb-3">ANO – 4 TN BN NCC</p>
+                        <p class="text-sm text-slate-500 font-semibold mb-3">ANO – 4 TN BN NCC <br> Kumaraguru College of Technology</p>
                         <div class="flex justify-center gap-3">
                             <a href="https://www.linkedin.com/in/sundarrajan-n-b83560126" class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center text-slate-600 hover:bg-blue-600 hover:text-white transition">
                                 <i data-lucide="linkedin" class="w-4 h-4"></i>
@@ -472,7 +511,7 @@
                             </div>
                         </div>
                         <h5 class="text-lg font-extrabold mb-1">Capt. Catherinedaisy M</h5>
-                        <p class="text-sm text-slate-500 font-semibold mb-3">ANO – 5 TN Girls BN NCC</p>
+                        <p class="text-sm text-slate-500 font-semibold mb-3">ANO – 5 TN Girls BN NCC <br> Kumaraguru College of Technology</p>
                         <div class="flex justify-center gap-3">
                             <a href="https://www.linkedin.com/in/capt-catherinedaisy-m-a02402179" class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center text-slate-600 hover:bg-blue-600 hover:text-white transition">
                                 <i data-lucide="linkedin" class="w-4 h-4"></i>
@@ -489,7 +528,7 @@
                             </div>
                         </div>
                         <h5 class="text-lg font-extrabold mb-1">Fg Offr. Dr Sengodan R</h5>
-                        <p class="text-sm text-slate-500 font-semibold mb-3">ANO – 5 TN Air Sqn (Tech) NCC </p>
+                        <p class="text-sm text-slate-500 font-semibold mb-3">ANO – 5 TN Air Sqn (Tech) NCC <br> Kumaraguru College of Technology </p>
                         <div class="flex justify-center gap-3">
                             <a href="https://www.linkedin.com/in/raja-sengodan-10898147" class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center text-slate-600 hover:bg-blue-600 hover:text-white transition">
                                 <i data-lucide="linkedin" class="w-4 h-4"></i>
@@ -869,7 +908,25 @@
             menu.classList.toggle("hidden");
         });
 
+        // Ensure only one details element opens at a time
+// Only one card open at a time inside wings section
+const accordion = document.getElementById("wings-accordion");
 
+if (accordion) {
+    const detailsList = accordion.querySelectorAll("details");
+
+    detailsList.forEach((detail) => {
+        detail.addEventListener("toggle", function () {
+            if (this.open) {
+                detailsList.forEach((other) => {
+                    if (other !== this) {
+                        other.open = false;
+                    }
+                });
+            }
+        });
+    });
+}
 
     </script>
 </body>
